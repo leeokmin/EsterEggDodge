@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,55 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EsterEggDodge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2R-o9-rpT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </skView>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhy-Ap-El9">
+                                <rect key="frame" x="132" y="692" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="SUv-4x-ek3"/>
+                                    <constraint firstAttribute="width" constant="150" id="ygK-FZ-fkZ"/>
+                                </constraints>
+                            </skView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjZ-Tr-CUS">
+                                <rect key="frame" x="145.5" y="421" width="123" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="RETRY?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="retryAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMF-5Y-d7L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xhy-Ap-El9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1sy-5d-eqy"/>
+                            <constraint firstItem="hjZ-Tr-CUS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7f1-vg-hdI"/>
+                            <constraint firstItem="W2R-o9-rpT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GzO-yy-ana"/>
+                            <constraint firstItem="W2R-o9-rpT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="avD-NF-Y5C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W2R-o9-rpT" secondAttribute="trailing" id="nUh-cn-rU5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xhy-Ap-El9" secondAttribute="bottom" constant="20" id="oqf-ZS-MQU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W2R-o9-rpT" secondAttribute="bottom" id="qMx-NC-oZD"/>
+                            <constraint firstItem="hjZ-Tr-CUS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xIi-BA-USu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="joystickView" destination="Xhy-Ap-El9" id="JRw-fr-PoZ"/>
+                        <outlet property="retryButton" destination="hjZ-Tr-CUS" id="bsZ-Ze-rTi"/>
+                        <outlet property="skView" destination="W2R-o9-rpT" id="hXi-cn-4N3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="138"/>
         </scene>
     </scenes>
 </document>

@@ -13,6 +13,11 @@
 		9CAE0669244052EF000F0B40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAE0667244052EF000F0B40 /* Main.storyboard */; };
 		9CAE066B244052F3000F0B40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CAE066A244052F3000F0B40 /* Assets.xcassets */; };
 		9CAE066E244052F3000F0B40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAE066C244052F3000F0B40 /* LaunchScreen.storyboard */; };
+		9CAE067A2440552B000F0B40 /* DodgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAE06792440552B000F0B40 /* DodgeScene.swift */; };
+		9CAE067C244055D9000F0B40 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAE067B244055D9000F0B40 /* Player.swift */; };
+		9CAE067E24406818000F0B40 /* Missle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAE067D24406818000F0B40 /* Missle.swift */; };
+		9CEE3D542465560F004C1E70 /* JoystickScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE3D532465560F004C1E70 /* JoystickScene.swift */; };
+		9CEE3D562465561F004C1E70 /* TLAnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE3D552465561F004C1E70 /* TLAnalogJoystick.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		9CAE066A244052F3000F0B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CAE066D244052F3000F0B40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CAE066F244052F3000F0B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CAE06792440552B000F0B40 /* DodgeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DodgeScene.swift; sourceTree = "<group>"; };
+		9CAE067B244055D9000F0B40 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9CAE067D24406818000F0B40 /* Missle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Missle.swift; sourceTree = "<group>"; };
+		9CEE3D532465560F004C1E70 /* JoystickScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoystickScene.swift; sourceTree = "<group>"; };
+		9CEE3D552465561F004C1E70 /* TLAnalogJoystick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLAnalogJoystick.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +69,15 @@
 				9CAE0661244052EF000F0B40 /* AppDelegate.swift */,
 				9CAE0663244052EF000F0B40 /* SceneDelegate.swift */,
 				9CAE0665244052EF000F0B40 /* ViewController.swift */,
+				9CEE3D552465561F004C1E70 /* TLAnalogJoystick.swift */,
 				9CAE0667244052EF000F0B40 /* Main.storyboard */,
+				9CEE3D532465560F004C1E70 /* JoystickScene.swift */,
 				9CAE066A244052F3000F0B40 /* Assets.xcassets */,
 				9CAE066C244052F3000F0B40 /* LaunchScreen.storyboard */,
 				9CAE066F244052F3000F0B40 /* Info.plist */,
+				9CAE06792440552B000F0B40 /* DodgeScene.swift */,
+				9CAE067B244055D9000F0B40 /* Player.swift */,
+				9CAE067D24406818000F0B40 /* Missle.swift */,
 			);
 			path = EsterEggDodge;
 			sourceTree = "<group>";
@@ -139,7 +154,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CAE0666244052EF000F0B40 /* ViewController.swift in Sources */,
+				9CAE067A2440552B000F0B40 /* DodgeScene.swift in Sources */,
 				9CAE0662244052EF000F0B40 /* AppDelegate.swift in Sources */,
+				9CEE3D562465561F004C1E70 /* TLAnalogJoystick.swift in Sources */,
+				9CAE067E24406818000F0B40 /* Missle.swift in Sources */,
+				9CAE067C244055D9000F0B40 /* Player.swift in Sources */,
+				9CEE3D542465560F004C1E70 /* JoystickScene.swift in Sources */,
 				9CAE0664244052EF000F0B40 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BP7Z894948;
 				INFOPLIST_FILE = EsterEggDodge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BP7Z894948;
 				INFOPLIST_FILE = EsterEggDodge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
